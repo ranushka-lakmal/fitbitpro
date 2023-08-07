@@ -58,7 +58,6 @@ const CheatMealManage = () => {
     }, [])
 
     const getData = () =>{
-        console.log("111");
         axios.get('https://localhost:7061/api/CheatMeal')
         .then((result)=>{
             console.log(result);
@@ -89,7 +88,7 @@ const CheatMealManage = () => {
             axios.delete(`https://localhost:7061/api/CheatMeal/${id}`)
             .then((result)=>{
                 if(result.status === 200){
-                    toast.success('Cheat Meal has been deleted sucessfully');
+                    toast.success('Cheat Meal has been deleted```');
                     getData();
                 }
             })
@@ -133,7 +132,7 @@ const CheatMealManage = () => {
        .then((result)=>{
            getData();
            clear();
-           toast.success('Cheat Meal has been added sucessfully');
+           toast.success('Cheat Meal has been added');
        }).catch((error)=>{
             toast.error(error);
        })
